@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a1511430.lab2.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="50px"
+        android:textColor="@color/header"
+        android:gravity="center"
+        android:text="@string/header" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Amount"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/loanAmount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="#.##"
+            android:textColor="@color/text_input"
+            android:textColorHint="@color/text_input"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms of Loan"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/termsOfLoan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="#.##"
+            android:textColor="@color/text_input"
+            android:textColorHint="@color/text_input"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yearly Interest Rate"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/yearlyInterestRate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="7.5"
+            android:textColor="@color/text_input"
+            android:textColorHint="@color/text_input"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@color/btns"
+            android:onClick="calculate"
+            android:text="@string/calculate" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:onClick="clear"
+            android:layout_height="wrap_content"
+            android:background="@color/btns"
+            android:text="@string/clear" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textColor="@color/header"
+        android:textSize="50px" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:text="Monthly payments"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip"/>
+            <TextView
+                android:id="@+id/monthly_payments_result"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="0.00" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Total Payment"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip" />
+            <TextView
+                android:id="@+id/total_payments_result"
+                android:text="0.00"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Total Interests"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip" />
+            <TextView
+                android:id="@+id/total_interests_result"
+                android:text="00.0"
+                android:textSize="35px"
+                android:gravity="center"
+                android:padding="5dip" />
+        </TableRow>
+    </TableLayout>
+
+
+
+
+
+</LinearLayout>
