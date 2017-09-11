@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/app_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,12 +10,10 @@
     android:weightSum="1">
 
     <TextView
+        style="@style/header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textSize="50px"
-        android:textColor="@color/header"
-        android:gravity="center"
-        android:text="@string/header" />
+        android:text="@string/title" />
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -22,9 +21,10 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp" >
         <TextView
+            style="@style/labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loan Amount"
+            android:text="@string/loan_amount_label"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
         <EditText
@@ -43,9 +43,10 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp" >
         <TextView
+            style="@style/labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terms of Loan"
+            android:text="@string/terms_of_loan_label"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
         <EditText
@@ -64,9 +65,10 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp" >
         <TextView
+            style="@style/labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yearly Interest Rate"
+            android:text="@string/yearly_interest_label"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
         <EditText
@@ -109,13 +111,12 @@
     </LinearLayout>
 
     <TextView
+        style="@style/header"
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
         android:text="@string/result"
-        android:textColor="@color/header"
-        android:textSize="50px" />
+        android:textColor="@color/header" />
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -123,13 +124,13 @@
         android:stretchColumns="1">
         <TableRow>
             <TextView
-                android:text="Monthly payments"
-                android:textSize="35px"
+                style="@style/labels"
+                android:text="@string/monthly_payment_label"
                 android:gravity="center"
                 android:padding="5dip"/>
             <TextView
+                style="@style/result_text"
                 android:id="@+id/monthly_payments_result"
-                android:textSize="35px"
                 android:gravity="center"
                 android:padding="5dip"
                 android:text="0.00" />
@@ -137,25 +138,26 @@
 
         <TableRow>
             <TextView
-                android:text="Total Payment"
-                android:textSize="35px"
+                style="@style/labels"
+                android:text="@string/total_payments_label"
                 android:gravity="center"
                 android:padding="5dip" />
             <TextView
+                style="@style/result_text"
                 android:id="@+id/total_payments_result"
                 android:text="0.00"
-                android:textSize="35px"
                 android:gravity="center"
                 android:padding="5dip" />
         </TableRow>
 
         <TableRow>
             <TextView
-                android:text="Total Interests"
-                android:textSize="35px"
+                style="@style/labels"
+                android:text="@string/total_interests_label"
                 android:gravity="center"
                 android:padding="5dip" />
             <TextView
+                style="@style/result_text"
                 android:id="@+id/total_interests_result"
                 android:text="00.0"
                 android:textSize="35px"
